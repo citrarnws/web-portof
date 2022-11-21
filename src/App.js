@@ -8,6 +8,4 @@ function App() {
     </div>
   );
 }
-citra jelek
-
 export default App;
