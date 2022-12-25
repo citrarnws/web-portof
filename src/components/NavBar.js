@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Navbar, Container } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from '../assets/img/logoc.png';
+
 
 
 export const NavBar = () => {
@@ -26,16 +27,16 @@ export const NavBar = () => {
     }
 
     return (
-        <Navbar expand="lg" className={scrolled ? "scrolled": ""}>
+        <Navbar expand="md" className={scrolled ? "scrolled": ""}>
             <Container>
-                <Navbar.Brand href="#home">
-                    <img src={logoc} alt="C|Citra"/>
+                <Navbar.Brand href="/">
+                    <img src={logo} alt="C|Citra"/>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" >
                     <span className="navbar-toggler-icon"></span>
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
+                    <Nav className="ms-auto">
                     <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
                     <Nav.Link href="#profile" className={activeLink === 'profile' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('profile')}>Profile</Nav.Link>
                     <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
