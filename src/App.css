@@ -44,6 +44,23 @@ h1, h2, h3, h4, h5, h6 {
   line-height: normal;
 }
 
+p, a, li, button, ul {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
 .App {
   text-align: center;
 }
