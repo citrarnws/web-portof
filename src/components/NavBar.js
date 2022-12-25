@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Navbar, Container } from "react-bootstrap";
 import logo from '../assets/img/logoc.png';
 
+
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
