@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from '../assets/img/logoc.png';
+import '../components/NavBar.css';
 
 
 
@@ -36,11 +37,35 @@ export const NavBar = () => {
                     <span className="navbar-toggler-icon"></span>
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-auto">
-                    <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-                    <Nav.Link href="#profile" className={activeLink === 'profile' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('profile')}>Profile</Nav.Link>
-                    <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-                    <Nav.Link href="#producs" className={activeLink === 'producs' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('producs')}>Producs</Nav.Link>
+                    <Nav className="header">
+                        <div className="nav__menu">
+                            <ul className="nav__list grid">
+                                <li className="nav__item">
+                                    <a href="#home" className={activeLink === 'home' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home
+                                    </a>
+                                </li>
+
+                                <li className="nav__item">
+                                    <a href="#profile" className={activeLink === 'profile' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('profile')}>Profile
+                                    </a>
+                                </li>
+
+                                <li className="nav__item">
+                                    <a href="#skills" className={activeLink === 'skills' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills
+                                    </a>
+                                </li>
+
+                                <li className="nav__item">
+                                    <a href="#producs" className={activeLink === 'producs' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('producs')}>Producs
+                                    </a>
+                                </li>
+
+                                <li className="nav__item">
+                                    <a href="#contact" className={activeLink === 'contact' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('contact')}>Contact
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
