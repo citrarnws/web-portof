@@ -18,6 +18,27 @@
 }
 
 /*default css*/
+:root {
+  --header-height: 3rem;
+  --container-color: #F5F5F5;
+  --body-font: "Poppins", sans-serif;
+
+  /*margins-bottom*/
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*z index*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -42,6 +63,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   line-height: normal;
+  color: #000000;
 }
 
 p, a, li, button, ul {
@@ -49,6 +71,7 @@ p, a, li, button, ul {
   padding: 0;
   line-height: normal;
   text-decoration: none;
+  list-style: none;
 }
 
 a:hover {
@@ -61,7 +84,9 @@ img {
 }
 
 button {
-  border: 0;
+  border: none;
+  cursor: pointer;
+  outline: none;
   background-color: transparent;
 }
 
@@ -69,19 +94,73 @@ input:focus, textarea:focus, select:focus {
   outline: none;
 }
 
-@media (min-width:1700px) {
-	main .container {
-		max-width: 100%;
-		padding: 0 150px;
+@media screen and (max-width:992px) {
+	:root {
+		--big-font-size: 2.75rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
 	}
 }
 
-p.success {
-	color: green;
+.section {
+  padding: 6rem 0 2rem;
 }
 
-p.danger {
-	color: red;
+.section__title {
+  font-size: var(--h1-font-size);
+  color: #0000;
+}
+
+.section__subtitle {
+  display: block;
+  font-size: small;
+  margin-bottom: 4rem;
+}
+
+.section__title, .section__subtitle {
+  text-align: center;
+}
+
+
+/*LAYOUT*/
+
+.container {
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/*BUTTONS*/
+
+.button {
+  display: inline-block;
+  background-color: #000000;
+  color: #F5F5F5;
+  padding: 1.25rem 2rem;
+  border-radius: 1rem;
+  font-weight: medium;
+}
+
+.button:hover{
+  background-color: #F5F5F5;
+}
+
+.button__icon {
+  margin-left: var(--mb-0-5);
+}
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
 }
 
 /*navbar css*/
@@ -93,4 +172,17 @@ nav.navbar {
   top: 0;
   z-index: 9999;
   transition: 0.32s ease-in-out;
+}
+
+/*breakpoints*/
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 576px) {
+}
+
+@media screen and (max-width: 350px) {
 }

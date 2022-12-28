@@ -41,27 +41,27 @@ export const NavBar = () => {
                         <div className="nav__menu">
                             <ul className="nav__list grid">
                                 <li className="nav__item">
-                                    <a href="#home" className={activeLink === 'home' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home
+                                    <a href="#home" className="nav__link">Home
                                     </a>
                                 </li>
 
                                 <li className="nav__item">
-                                    <a href="#profile" className={activeLink === 'profile' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('profile')}>Profile
+                                    <a href="#profile" className="nav__link">Profile
                                     </a>
                                 </li>
 
                                 <li className="nav__item">
-                                    <a href="#skills" className={activeLink === 'skills' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills
+                                    <a href="#skills" className="nav__link">Skills
                                     </a>
                                 </li>
 
                                 <li className="nav__item">
-                                    <a href="#producs" className={activeLink === 'producs' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('producs')}>Producs
+                                    <a href="#producs" className="nav__link">Producs
                                     </a>
                                 </li>
 
                                 <li className="nav__item">
-                                    <a href="#contact" className={activeLink === 'contact' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('contact')}>Contact
+                                    <a href="#contact" className="nav__link">Contact
                                     </a>
                                 </li>
                             </ul>
